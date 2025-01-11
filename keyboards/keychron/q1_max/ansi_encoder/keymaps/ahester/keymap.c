@@ -33,6 +33,8 @@ enum layers {
     LAYER_3,
 };
 
+// https://docs.qmk.fm/keycodes
+
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [MAC_BASE] = LAYOUT_ansi_82(
@@ -60,11 +62,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_LCTL,  KC_LGUI,  KC_LALT,                                KC_SPC,                                 KC_RALT,TO(LAYER_2),KC_RCTL,  KC_LEFT,  KC_DOWN,  KC_RGHT),
 
     [LAYER_2] = LAYOUT_ansi_82(
-        _______,  KC_BRID,  KC_BRIU,  KC_TASK,  KC_FILE,  RGB_VAD,  RGB_VAI,  KC_MPRV,  KC_MPLY,  KC_MNXT,  KC_MUTE,  KC_VOLD,  KC_VOLU,  _______,            RGB_TOG,
+        _______,  KC_BRID,  KC_BRIU,  KC_TASK,  KC_FILE,  RGB_VAD,  RGB_VAI,  KC_MPRV,  KC_MPLY,  KC_MNXT,  KC_MUTE,  KC_VOLD,  KC_VOLU,  KC_PSCR,            RGB_TOG,
         _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,            _______,
         RGB_TOG,  _______,  _______,  _______,  _______,  _______,  _______,  KC_P7,    KC_P8,    KC_P9,    _______,  _______,  _______,  _______,            _______,
         _______,  M_ALL,    _______,  _______,  _______,  _______,  _______,  KC_P4,    KC_P5,    KC_P6,    _______,  _______,            _______,            KC_END,
-        _______,            M_UNDO,   M_CUT,    M_COPY,   M_PASTE,  _______,  KC_P0,    KC_P1,    KC_P2,    KC_P3,    _______,            _______,  _______,
+        _______,            M_UNDO,   M_CUT,    M_COPY,   M_PASTE,  _______,  KC_P0,    KC_P1,    KC_P2,    KC_P3,    KC_DOT,             _______,  _______,
     TO(LAYER_3),  _______,  _______,                                _______,                                _______,TO(WIN_BASE),_______, _______,  _______,  _______),
 
     [LAYER_3] = LAYOUT_ansi_82(
